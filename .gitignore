@@ -1,0 +1,13 @@
+target/
+*.class
+*.log
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+*.db
+*.db-wal
+*.db-shm
+dependency-reduced-pom.xml

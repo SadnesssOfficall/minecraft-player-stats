@@ -1,0 +1,45 @@
+storage:
+  file: stats.db
+  flush-interval-seconds: 60
+  queue-capacity: 1024
+  shutdown-timeout-seconds: 15
+
+movement:
+  min-step: 0.1
+  max-step: 8.0
+
+leaderboard:
+  page-size: 10
+
+labels:
+  playtime: "Playtime"
+  joins: "Joins"
+  deaths: "Deaths"
+  player-kills: "Player kills"
+  mob-kills: "Mob kills"
+  blocks-broken: "Blocks broken"
+  blocks-placed: "Blocks placed"
+  distance-walked: "Distance walked"
+  distance-flown: "Distance flown"
+  distance-swum: "Distance swum"
+
+messages:
+  no-permission: "<red>You do not have permission to do that."
+  player-only: "<red>Console must specify a player: /stats <player>"
+  player-not-found: "<red>No statistics found for <white><player></white>."
+  stats-loading: "<yellow>Statistics are still loading. Try again in a moment."
+  stats-header: "<gold><bold>Statistics for <player>"
+  stats-line: "<gray><label>: <white><value>"
+  top-header: "<gold><bold>Top <label> <gray>(page <page>/<pages>)"
+  top-line: "<gray>#<rank> <white><player> <gray>- <yellow><value>"
+  top-empty: "<yellow>Nobody has recorded <label> yet."
+  usage-stats: "<red>Usage: /stats [player] | /stats top <field> [page]"
+  usage-admin: "<red>Usage: /adminstats <player> reset | <player> set <field> <value> | top <field> [page]"
+  invalid-player-name: "<red><input> is not a valid player name."
+  invalid-field: "<red>Unknown field <white><input></white>. Available: <fields>"
+  invalid-value: "<red><input> is not a valid value. Use a whole number (distances in meters, playtime in seconds)."
+  invalid-page: "<red><input> is not a valid page number."
+  admin-reset: "<green>Statistics for <white><player></white> were reset."
+  admin-set: "<green>Set <label> for <white><player></white> to <white><value></white>."
+  storage-busy: "<red>The statistics storage is busy. Try again shortly."
+  storage-error: "<red>The statistics storage failed. Check the server log."

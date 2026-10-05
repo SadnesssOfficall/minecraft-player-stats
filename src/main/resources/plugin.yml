@@ -1,0 +1,26 @@
+name: PlayerStats
+version: ${project.version}
+main: net.sadness.playerstats.bukkit.PlayerStatsPlugin
+api-version: '1.20'
+author: Sadness
+description: ${project.description}
+website: ${project.url}
+libraries:
+  - org.xerial:sqlite-jdbc:${sqlite.version}
+commands:
+  stats:
+    description: Show your statistics, another player's statistics or a leaderboard
+    usage: '/<command> [player | top <field> [page]]'
+  adminstats:
+    description: Manage player statistics
+    usage: '/<command> <player> reset | <player> set <field> <value> | top <field> [page]'
+permissions:
+  playerstats.view:
+    description: View your own statistics and leaderboards
+    default: true
+  playerstats.view.others:
+    description: View other players' statistics
+    default: true
+  playerstats.admin:
+    description: Reset or edit statistics
+    default: op
